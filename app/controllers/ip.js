@@ -7,7 +7,7 @@ module.exports = function (app) {
 
             var slipIp = clientIp.split('::ffff:');
             if (slipIp[1]) {
-                res.json({ ip_address: clientIp });
+                res.json({ ip_address: slipIp[1] });
             } else {
                 res.json({ err_message: 'IP não encontrado' });
             }
