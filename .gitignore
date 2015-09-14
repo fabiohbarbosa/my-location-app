@@ -1,0 +1,5 @@
+.vagrant/
+vagrant.yml
+.idea/
+node_modules/
+*.log
