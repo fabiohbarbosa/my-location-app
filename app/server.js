@@ -21,6 +21,10 @@ app.mongoose = require('./lib/db_connection')();
 var Type = ['invalid_ip', 'api_error'];
 app.Type = Type;
 
+var cors = require('./lib/cors');
+
+app.use(cors.enableCORS);
+
 var load = require('express-load');
 load('models', {cwd: 'app'})
     .then('controllers', {cwd: 'app'})
