@@ -1,0 +1,30 @@
+{
+  "name": "my-location",
+  "version": "1.0.0",
+  "description": "Node app for fabiohbarbosa.wordpress.com tutorial",
+  "main": "app/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabiohbarbosa/my-location.git"
+  },
+  "author": "fabiohbarbosa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fabiohbarbosa/my-location/issues"
+  },
+  "homepage": "https://github.com/fabiohbarbosa/my-location#readme",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "express-load": "^1.1.15",
+    "mongoose": "^4.1.6",
+    "request-ip": "^1.1.4"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
