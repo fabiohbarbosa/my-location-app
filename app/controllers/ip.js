@@ -4,11 +4,13 @@ module.exports = function (app) {
     return {
         get: function (req, res, next) {
             var clientIp = requestIp.getClientIp(req);
-            var ipAddress = {
-                ip_address: clientIp
-            };
 
-            res.json(ipAddress);
+            var slipIp = clientIp.split('::ffff:');
+            if (slipIp[1]) {
+                res.json({ ip_address: clientIp });
+            } else {
+                res.json({ err_message: 'IP não encontrado' });
+            }
         }
     };
 };
